@@ -23,8 +23,19 @@
   var y_2 = parseInt(y.toString(2));
   //alert(x_2^y_2);
   var xor = x_2 ^ y_2;
-  //  
 
+  var arr = new Array();
+  arr.push(parseInt(xor/1000));
+  arr.push(parseInt(xor%1000/100));
+  arr.push(parseInt(xor%1000%100/10));
+  arr.push(parseInt(xor%1000%100%10));
+  var distance = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if(arr[i]==1){
+      distance = distance + 1;
+    }
+  }
+  alert(distance);
   </script>
 </body>
 
