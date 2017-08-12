@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>595.Big Countries</title>
+</head>
+<body>
+<h3>题目</h3>
+There is a table World<br />
+
++-----------------+------------+------------+--------------+---------------+<br />
+|&nbsp;name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;continent&nbsp;&nbsp;|&nbsp;area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;population&nbsp;&nbsp;&nbsp;|&nbsp;gdp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
++-----------------+------------+------------+--------------+---------------+<br />
+|&nbsp;Afghanistan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Asia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;652230&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;25500100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;20343000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
+|&nbsp;Albania&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Europe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;28748&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;2831741&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;12960000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
+|&nbsp;Algeria&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Africa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;2381741&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;37100000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;188681000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
+|&nbsp;Andorra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Europe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;468&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;78115&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;3712000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
+|&nbsp;Angola&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Africa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;1246700&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;20609294&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;100990000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
++-----------------+------------+------------+--------------+---------------+<br />
+
+
+    A country is big if it has an area of bigger than 3 million square km or a population of more than 25 million.<br />
+    Write a SQL solution to output big countries' name, population and area.<br />
+    For example, according to the above table, we should output:<br />
+
++--------------+-------------+--------------+<br />
+|&nbsp;name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;population&nbsp;&nbsp;|&nbsp;area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
++--------------+-------------+--------------+<br />
+|&nbsp;Afghanistan&nbsp;&nbsp;|&nbsp;25500100&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;652230&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
+|&nbsp;Algeria&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;37100000&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;2381741&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
++--------------+-------------+--------------+<br />
+
+<p>数据库题目，直接上答案：</p>
+<p>SELECT name,population,area FROM World WHERE ((population>=25000000) OR (area>=3000000))</p>
+</body>
+</html>
